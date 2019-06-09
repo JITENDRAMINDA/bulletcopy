@@ -13,7 +13,7 @@ s = '-1001378725482'
 
 def forawrd(client, message):
 
-   client.send_message(int(u),message.text)
+   client.send_message(int(u), "**" + message.text + "**")
            
 
 
