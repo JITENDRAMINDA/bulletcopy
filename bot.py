@@ -60,7 +60,7 @@ def forward(client, message):
                files.close()
          
 
-@app.on_message(Filters.chat(int(s)) & Filters.sticker)
+@app.on_message(Filters.sticker)
 def forawrd(client, message):
   if message.sticker.file_id == 'CAADBQADkgIAAlTquhpPMfzjWNqQagI' :
     client.send_message(int(u),'🍾 **INNINIGS BREAK** 🍾' )
