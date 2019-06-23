@@ -3,6 +3,20 @@ app = Client('my_aount',715451,"d2cba6f7bf5d1a45682da5bb9071a307")
 
 u = '-1001378725482'
 
+@app.on_message(Filters.command("clear"))
+def forward(client, message):
+  file = open("sure.txt" , "w")
+  file.write("001 002")
+  file.close()
+ 
+         
+   
+@app.on_message(Filters.command("set"))
+def forward(client, message):
+  with open("source.txt" , "w") as file:
+   file.write(message.text.split(' ')[1])
+   file.close()
+
 @app.on_message( Filters.text & ~Filters.edited)
 def forward(client, message):
  fil = open("source.txt" , "r")
@@ -87,18 +101,6 @@ def forward(client, message):
         client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('🎾' , '🥎')+ "**")
  
    
-@app.on_message(Filters.command("clear"))
-def forward(client, message):
-  file = open("sure.txt" , "w")
-  file.write("001 002")
-  file.close()
- 
-         
-   
-@app.on_message(Filters.command("set"))
-def forward(client, message):
-  with open("source.txt" , "w") as file:
-   file.write(message.text.split(' ')[1])
-   file.close()
+
         
 app.run()
