@@ -89,7 +89,7 @@ def forward(client, message):
    
 @app.on_message(Filters.command("clear"))
 def forward(client, message):
-  file = open("sure.txt" , "r")
+  file = open("sure.txt" , "w")
   file.write("001 002")
   file.close()
  
@@ -97,7 +97,7 @@ def forward(client, message):
    
 @app.on_message(Filters.command("set"))
 def forward(client, message):
-  with open("source.txt" , "r") as file:
+  with open("source.txt" , "w") as file:
    file.write(message.text.split(' ')[1])
    file.close()
         
