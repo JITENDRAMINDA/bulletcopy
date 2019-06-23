@@ -1,5 +1,5 @@
 from pyrogram import Client, Filters,Emoji
-app = Client('my_aount',715451,"d2cba6f7bf5d1a45682da5bb9071a307")
+app = Client("mnnn",768402,"f6420bf67303614279049d48d3e670f6")
 
 u = '-1001378725482'
 
