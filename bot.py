@@ -20,7 +20,7 @@ def forward(client, message):
 @app.on_message( Filters.text & ~Filters.edited)
 def forward(client, message):
  fil = open("source.txt" , "r")
- lins = file.readlines()
+ lins = fil.readlines()
  fil.close()
  for t in lins:
   if t == message.chat.id:
@@ -82,7 +82,7 @@ def forawrd(client, message):
 @app.on_message( Filters.text & Filters.edited)
 def forward(client, message):
  fil = open("source.txt" , "r")
- lins = file.readlines()
+ lins = fil.readlines()
  fil.close()
  for t in lins:
   if t == message.chat.id:
