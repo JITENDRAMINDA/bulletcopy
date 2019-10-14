@@ -3,14 +3,15 @@ app = Client("session",771202,"28eed966b0cd4238a4f4f8f0ab4c9c72")
 k = -1001378725482
 @app.on_message(Filters.command("clear"))
 def forward(client, message):
-  file = open("ids.txt" , "w")
-  file.write("0001")
-  file.close() 
+  with open("ids.txt" , "w") as file:
+   file.write("0001")
+   file.close() 
 @app.on_message(Filters.command("set"))
 def forward(client, message):
   with open("source.txt" , "w") as file:
    file.write(message.text.split(' ')[1])
    file.close()
+   message.reply("done bro ₹₹₹₹ ")
 @app.on_message( Filters.text & ~Filters.edited)
 def forward(client, message):
  fil = open("source.txt" , "r")
