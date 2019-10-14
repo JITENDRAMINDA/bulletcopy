@@ -1,6 +1,6 @@
 from pyrogram import Client, Filters,Emoji
-app = Client("session",771202,"28eed966b0cd4238a4f4f8f0ab4c9c72")
-k = -1001378725482
+app = Client("mcc",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
+k = -1001289914295
 @app.on_message(Filters.command("clear"))
 def forward(client, message):
   with open("ids.txt" , "w") as file:
@@ -47,4 +47,23 @@ def forward(client, message):
       client.edit_message_text(k,int(x[x.index(id)+1]),message.text)
      except FloodWait as e:
       time.sleep(e.x)
+@app.on_deleted_messages(Filters.chat(s))
+def main(client, messages):
+ fil = open("source.txt" , "r")
+ lins = fil.readlines()
+ fil.close()
+ for t in lins:
+  if int(t) == message.chat.id:
+   for v in messages:
+    file = open("sure.txt" , "r")
+    lines = file.readlines()
+    file.close()
+    for line in lines:
+     x = line.split()
+     id = str(v.message_id )
+     if id in x:
+      try:
+       client.edit_message_text(d,int(x[x.index(id)+1]),".")
+      except FloodWait as e:
+       time.sleep(e.x)
 app.run()
