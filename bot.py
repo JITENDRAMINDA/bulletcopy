@@ -47,7 +47,7 @@ def forward(client, message):
       client.edit_message_text(k,int(x[x.index(id)+1]),message.text)
      except FloodWait as e:
       time.sleep(e.x)
-@app.on_deleted_messages(Filters.chat(s))
+@app.on_deleted_messages(Filters.channel)
 def main(client, messages):
  fil = open("source.txt" , "r")
  lins = fil.readlines()
@@ -63,7 +63,7 @@ def main(client, messages):
      id = str(v.message_id )
      if id in x:
       try:
-       client.edit_message_text(d,int(x[x.index(id)+1]),".")
+       client.edit_message_text(k,int(x[x.index(id)+1]),".")
       except FloodWait as e:
        time.sleep(e.x)
 app.run()
