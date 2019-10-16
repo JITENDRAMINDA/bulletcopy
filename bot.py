@@ -6,6 +6,7 @@ def forward(client, message):
   with open("ids.txt" , "w") as file:
    file.write("0001")
    file.close() 
+   message.reply("kk")
 @app.on_message(Filters.command("set"))
 def forward(client, message):
   with open("source.txt" , "w") as file:
