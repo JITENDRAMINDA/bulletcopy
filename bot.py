@@ -1,6 +1,6 @@
 from pyrogram import Client, Filters,Emoji
-app = Client("session",771202,"28eed966b0cd4238a4f4f8f0ab4c9c72")
-k = -1001378725482
+app = Client("mcc",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
+k = -1001453099412
 @app.on_message(Filters.command("clearf"))
 def forward(client, message):
   with open("ids.txt" , "w") as file:
@@ -21,7 +21,7 @@ def forward(client, message):
  for t in lins:
   if int(t) == message.chat.id:
     f = False
-    words = ['dekho','fix','😱','😢','😳','fixer','👆','👇','match','pass','sab','chase','defend','hai','karvana','link','loss','audio','varna','pura','puri','open','paid','contact','baazigar','market','load','whatsapp','timepass','kamma','book','teenpatti','diya','bhai','😀','😑','😐','😊','😜','😇','😎','😂','😘','😋','😝','🥺','members','🖕','member','only','chut','lund','gand','ma','maa','bhosdi','bahan','loude','lode','lavde','chutiya','🤞','🤟','☝️','mkc','bkc','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','wbt','line','who',"https://",'joinchat','bullet','fuck','🤔','LUND',"?","LU"]
+    words = ['dekho','TRUST','join','fix','😱','😳','👆','👇','☝️','https://','😂','🤔','pass','chase','link','suno','member','❓','loss','audio','open',"report",'paid','contact','baazigar','market','load','whatsapp','book','bhai','🐴','only','chut','tennis','teen','lavde','chutiya','bc','kya','line','LUND','WICKET LU','?','loda','telegram','chor',"kama","lakh",' id','स',"kitna"]
     for word in words:
      if word.casefold() in message.text.casefold():
       f = True
