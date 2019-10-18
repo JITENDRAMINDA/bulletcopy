@@ -1,13 +1,13 @@
 from pyrogram import Client, Filters,Emoji
 app = Client("mcc",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
 k = -1001289914295
-@app.on_message(Filters.command("clearf"))
+@app.on_message(Filters.command("clearb"))
 def forward(client, message):
   with open("ids.txt" , "w") as file:
    file.write("0001")
    file.close() 
    message.reply("kk")
-@app.on_message(Filters.command("setf"))
+@app.on_message(Filters.command("setb"))
 def forward(client, message):
   with open("source.txt" , "w") as file:
    file.write(message.text.split(' ')[1])
