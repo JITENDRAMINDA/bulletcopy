@@ -1,7 +1,7 @@
 from pyrogram import Client, Filters,Emoji
 app = Client("mcc",715451,"d2cba6f7bf5d1a45682da5bb9071a307")
 k = -1001289914295
-@app.on_message(Filters.command("clearb"))
+@app.on_message(Filters.command("cz"))
 def forward(client, message):
   with open("ids.txt" , "w") as file:
    file.write("0001")
