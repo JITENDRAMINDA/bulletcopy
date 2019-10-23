@@ -19,7 +19,7 @@ def forward(client, message):
       fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
       fie.close()   
 @app.on_message( Filters.text & Filters.edited & Filters.channel)
-def forward(client, message)
+def forward(client, message):
  fil = open("source.txt" , "r")
  lins = fil.readlines()
  fil.close()
