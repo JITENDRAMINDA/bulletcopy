@@ -18,8 +18,8 @@ def forward(client, message):
       fie = open("ids.txt","a")
       fie.write(" " + str(message.message_id) + " " + str(mes.message_id))
       fie.close()   
-@app.on_message( Filters.text & Filters.edited, Filter.channel)
-def forward(client, message):
+@app.on_message( Filters.text & Filters.edited & Filters.channel)
+def forward(client, message)
  fil = open("source.txt" , "r")
  lins = fil.readlines()
  fil.close()
